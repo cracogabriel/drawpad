@@ -109,7 +109,7 @@ Cliente → digita o ID da sala → entra na sala
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Camada         | Tecnologia |
 | -------------- | ---------- |
@@ -121,6 +121,6 @@ Cliente → digita o ID da sala → entra na sala
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
