@@ -116,8 +116,8 @@ Cliente → digita o ID da sala → entra na sala
 | WebSocket      | Socket.IO  |
 | Cache          | Redis      |
 | Banco de Dados | PostgreSQL |
-| Backend        | ??         |
-| Frontend       | ??         |
+| Backend        | Ruby       |
+| Frontend       | ReactJS    |
 
 ---
 
