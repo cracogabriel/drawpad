@@ -1,0 +1,34 @@
+services:
+  # ─── Banco de dados PostgreSQL ───────────────────────────────────────────────
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5411:5432" # acessível em localhost:5411
+    volumes:
+      - pg_data:/var/lib/postgresql/data # dados persistem entre restarts
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ─── Cache / PubSub Redis ────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6311:6379" # acessível em localhost:6379
+    volumes:
+      - redis_data:/data # dados persistem entre restarts
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+# ─── Volumes persistentes ────────────────────────────────────────────────────
+volumes:
+  pg_data:
+  redis_data:

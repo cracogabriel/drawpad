@@ -1,0 +1,24 @@
+# config/database.yml
+# Esse arquivo define as conexões com o PostgreSQL para cada ambiente.
+# As variáveis de ambiente (DATABASE_URL etc.) podem ser definidas num arquivo .env
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS", 5) %>
+
+development:
+  <<: *default
+  database: drawpad_development
+  host: <%= ENV.fetch("DB_HOST", "localhost") %>
+  port: <%= ENV.fetch("DB_PORT", 5432) %>
+  username: <%= ENV.fetch("DB_USER", "postgres") %>
+  password: <%= ENV.fetch("DB_PASSWORD", "postgres") %>
+
+test:
+  <<: *default
+  database: drawpad_test
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
