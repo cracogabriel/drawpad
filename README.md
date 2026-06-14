@@ -121,6 +121,14 @@ Cliente → digita o ID da sala → entra na sala
 
 ---
 
+## Como Rodar o Projeto
+
+Instruções detalhadas para instalar dependências, subir a infraestrutura com Docker e iniciar o back-end e front-end estão em:
+
+📄 **[SETUP.md](SETUP.md)**
+
+---
+
 ## Interfaces de Comunicação
 
 As interfaces HTTP REST e WebSocket utilizadas para comunicação entre frontend e backend estão documentadas em detalhes no arquivo:
