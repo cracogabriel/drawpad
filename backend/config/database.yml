@@ -11,7 +11,7 @@ development:
   <<: *default
   database: drawpad_development
   host: <%= ENV.fetch("DB_HOST", "localhost") %>
-  port: <%= ENV.fetch("DB_PORT", 5432) %>
+  port: <%= ENV.fetch("DB_PORT", 5411) %>
   username: <%= ENV.fetch("DB_USER", "postgres") %>
   password: <%= ENV.fetch("DB_PASSWORD", "postgres") %>
 
