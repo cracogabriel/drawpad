@@ -109,6 +109,31 @@ Cliente → digita o ID da sala → entra na sala
 
 ---
 
+## Diagramas de Sequência
+
+Para entender melhor a dinâmica de comunicação entre as camadas da aplicação, os fluxos abaixo detalham a interação ponta a ponta desde as requisições HTTP iniciais até a comunicação bidirecional via WebSockets.
+
+### 1. Entrada na Sala (Carga Inicial)
+Este fluxo demonstra o momento em que o usuário acessa o sistema, busca o histórico de desenhos (passando pela estratégia de cache) e renderiza a tela inicial.
+
+![Diagrama de Sequência - Entrada na Sala](assets/Diagrama1.png)
+
+---
+
+### 2. Desenhar uma Figura (Fluxo Principal)
+Mostra o caminho que um vetor leva desde o clique e arraste do mouse no canvas do Frontend até a persistência definitiva no banco de dados.
+
+![Diagrama de Sequência - Desenhar uma Figura](assets/Diagrama2.png)
+
+---
+
+### 3. Sincronização em Tempo Real
+Detala como o Action Cable (Rails) gerencia o ecossistema de WebSockets para propagar as alterações de um usuário para todos os outros navegadores conectados na mesma sala de forma instantânea.
+
+![Diagrama de Sequência - Sincronização em Tempo Real](assets/Diagrama3.PNG)
+
+---
+
 ## Tecnologias Utilizadas
 
 | Camada         | Tecnologia                                  |
