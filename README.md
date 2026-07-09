@@ -2,6 +2,8 @@
 
 > Quadro colaborativo em tempo real.
 
+[![Assista à demonstração](https://img.shields.io/badge/YouTube-Ver%20Demonstração-red?logo=youtube)](https://www.youtube.com/watch?v=ITIi7dmiT3s)
+
 ---
 
 ## Sobre o Projeto
